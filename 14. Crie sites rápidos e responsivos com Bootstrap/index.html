@@ -11,26 +11,33 @@
 
 <body class="bg-light">
 
-    <header class="text-center bg-info text-white py-5">
-        <div class="container">
-            <nav class="navbar bg-info">
-                <div class="container-fluid d-flex align-items-center justify-content-between">
-                    <img src="https://placehold.co/100x100" class="rounded-circle" alt="Logo do Evento">
-                    <h1 class="fw-bold mb-0">Barbearia Estilo Livre</h1>
-                    <div>
-                        <a class="navbar-brand text-white" href="#">Home</a>
-                        <a class="navbar-brand text-white" href="#">Sobre nós</a>
-                        <a class="navbar-brand text-white" href="#">Serviços</a>
-                        <a class="navbar-brand text-white" href="#">Depoimentos</a>
-                        <a class="navbar-brand text-white" href="#">Contato</a>
-                    </div>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-info">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2 text-white fw-bold" href="#">
+                    <img src="https://placehold.co/50x50" class="rounded-circle" alt="Logo da Barbearia">
+                    Barbearia Estilo Livre
+                </a>
+                <button class="navbar-toggler border-white" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                    aria-controls="navbarMenu" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon filter-white"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto gap-lg-2">
+                        <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#about">Sobre nós</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#services">Serviços</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#depoiments">Depoimentos</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#contact">Contato</a></li>
+                    </ul>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
 
     <!-- Home -->
-    <section class="position-relative text-white" style="min-height: 600px; overflow: hidden;">
+    <section id="home" class="position-relative text-white" style="min-height: 600px; overflow: hidden;">
         <img src="https://placehold.co/1400x600" class="w-100 h-100 object-fit-cover position-absolute top-0 start-0"
             alt="Banner da Barbearia" style="object-fit: cover;">
         <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
@@ -43,7 +50,7 @@
     </section>
 
     <!-- Sobre nós -->
-    <section class="py-5 bg-white">
+    <section id="about" class="py-5 bg-white">
         <div class="container">
             <h2 class="text-center fw-bold mb-5">Sobre nós</h2>
             <div class="row">
@@ -63,7 +70,7 @@
     </section>
 
     <!-- Serviços -->
-    <section class="bg-info">
+    <section id="services" class="bg-info">
         <div class="container py-5">
             <h2 class="text-center fw-bold text-white mb-5">Serviços</h2>
             <div class="row g-4">
@@ -102,61 +109,81 @@
     </section>
 
     <!-- Depoimentos -->
-    <section class="bg-white">
+    <section id="depoiments" class="bg-white">
         <div class="container py-5">
             <h2 class="text-center fw-bold mb-5">Depoimentos</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 text-center">
-                        <div class="card-body">
-                            <p class="card-text">"Excelente atendimento e profissionais muito qualificados. Recomendo a
-                                todos!"</p>
-                            <h5 class="card-title mt-3">João Silva</h5>
+            <div id="carouselDepoimentos" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselDepoimentos" data-bs-slide-to="0" class="active bg-info" aria-current="true" aria-label="Depoimento 1"></button>
+                    <button type="button" data-bs-target="#carouselDepoimentos" data-bs-slide-to="1" class="bg-info" aria-label="Depoimento 2"></button>
+                    <button type="button" data-bs-target="#carouselDepoimentos" data-bs-slide-to="2" class="bg-info" aria-label="Depoimento 3"></button>
+                </div>
+                <div class="carousel-inner pb-5">
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-center">
+                            <div class="card text-center" style="max-width: 600px; width: 100%;">
+                                <div class="card-body py-4">
+                                    <p class="card-text fs-5">"Excelente atendimento e profissionais muito qualificados. Recomendo a todos!"</p>
+                                    <h5 class="card-title mt-3">João Silva</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="card text-center" style="max-width: 600px; width: 100%;">
+                                <div class="card-body py-4">
+                                    <p class="card-text fs-5">"A melhor barbearia que já frequentei. Ambiente agradável e cortes impecáveis."</p>
+                                    <h5 class="card-title mt-3">Maria Oliveira</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="card text-center" style="max-width: 600px; width: 100%;">
+                                <div class="card-body py-4">
+                                    <p class="card-text fs-5">"Profissionais atenciosos e resultados incríveis. Sempre saio satisfeito daqui."</p>
+                                    <h5 class="card-title mt-3">Carlos Pereira</h5>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100 text-center">
-                        <div class="card-body">
-                            <p class="card-text">"A melhor barbearia que já frequentei. Ambiente agradável e cortes
-                                impecáveis."</p>
-                            <h5 class="card-title mt-3">Maria Oliveira</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 text-center">
-                        <div class="card-body">
-                            <p class="card-text">"Profissionais atenciosos e resultados incríveis. Sempre saio
-                                satisfeito
-                                daqui."</p>
-                            <h5 class="card-title mt-3">Carlos Pereira</h5>
-                        </div>
-                    </div>
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-info rounded-circle p-3" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-info rounded-circle p-3" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
             </div>
         </div>
     </section>
 
     <!-- Contato -->
-     <section class="bg-info">
+     <section id="contact" class="bg-info">
         <div class="container py-5">
             <h2 class="text-center fw-bold text-white mb-5">Contato</h2>
             <div class="row justify-content-center">
                 <div class="col-md-6">
-                    <form>
+                    <div id="contatoSucesso" class="alert alert-success d-none" role="alert">
+                        Mensagem enviada com sucesso! Entraremos em contato em breve.
+                    </div>
+                    <form id="contatoForm" novalidate>
                         <div class="mb-3">
                             <label for="nome" class="form-label text-white">Nome</label>
-                            <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
+                            <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label text-white">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Digite seu email">
+                            <input type="email" class="form-control" id="email" placeholder="Digite seu email" required>
                         </div>
                         <div class="mb-3">
                             <label for="mensagem" class="form-label text-white">Mensagem</label>
                             <textarea class="form-control" id="mensagem" rows="4"
-                                placeholder="Digite sua mensagem"></textarea>
+                                placeholder="Digite sua mensagem" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-light w-100">Enviar</button>
                     </form>
@@ -174,6 +201,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script>
+        document.getElementById('contatoForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (!this.checkValidity()) {
+                this.classList.add('was-validated');
+                return;
+            }
+            this.reset();
+            this.classList.remove('was-validated');
+            const alerta = document.getElementById('contatoSucesso');
+            alerta.classList.remove('d-none');
+            setTimeout(() => alerta.classList.add('d-none'), 5000);
+        });
+    </script>
 </body>
 
 </html>
