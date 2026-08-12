@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet&Style</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="bg-gray-800 text-white p-4">
+        <nav class="flex flex-col sm:flex-row items-center justify-between max-w-6xl mx-auto gap-4">
+            <a class="flex items-center gap-3" href="#">
+                <img src="https://placehold.co/50x50" class="rounded-full" alt="Logo da Barbearia">
+                <h1 class="text-2xl font-bold">Pet&Style</h1>
+            </a>
+            <div id="navbarMenu" class="w-full sm:w-auto">
+                <ul class="flex flex-wrap justify-center gap-3 sm:gap-6">
+                    <li><a class="nav-link text-white hover:text-yellow-400 transition-colors" href="#hero">Home</a></li>
+                    <li><a class="nav-link text-white hover:text-yellow-400 transition-colors" href="#products">Produtos</a></li>
+                    <li><a class="nav-link text-white hover:text-yellow-400 transition-colors" href="#depoiments">Depoimentos</a></li>
+                    <li><a class="nav-link text-white hover:text-yellow-400 transition-colors" href="#contact">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero -->
+        <section id="hero" class="relative">
+            <img src="https://placehold.co/1400x600" class="w-full h-64 md:h-96 object-cover" alt="Banner da Pet&Style">
+            <!-- overlay escuro para legibilidade do texto -->
+            <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-4">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-3">Pet&Style</h2>
+                <p class="text-lg md:text-xl text-gray-200 mb-6">Melhor Petshop de Florianópolis - SC</p>
+                <a href="#products"
+                    class="bg-yellow-400 text-gray-900 font-semibold px-6 py-3 rounded-full hover:bg-yellow-300 transition-colors">
+                    Ver produtos
+                </a>
+            </div>
+        </section>
+
+        <!-- Products -->
+        <section id="products" class="bg-white">
+            <div class="max-w-6xl mx-auto py-8 md:py-12 px-4">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center text-gray-800">Nossos Produtos</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <!-- Produto 1 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:border-yellow-400 transition-colors">
+                        <img src="https://placehold.co/400x300" alt="Caminha Pet Luxo" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg md:text-xl font-semibold mb-2">Caminha Pet Luxo</h3>
+                            <p class="text-gray-700 mb-4">Caminha macia e confortável para cães e gatos de todos os tamanhos.</p>
+                            <span class="text-yellow-500 font-bold">R$ 89,90</span>
+                        </div>
+                    </div>
+                    <!-- Produto 2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:border-yellow-400 transition-colors">
+                        <img src="https://placehold.co/400x300" alt="Brinquedo de Corda" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg md:text-xl font-semibold mb-2">Brinquedo de Corda</h3>
+                            <p class="text-gray-700 mb-4">Brinquedo resistente de corda para estimular e divertir seu pet.</p>
+                            <span class="text-yellow-500 font-bold">R$ 24,90</span>
+                        </div>
+                    </div>
+                    <!-- Produto 3 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:border-yellow-400 transition-colors">
+                        <img src="https://placehold.co/400x300" alt="Coleira Estilosa" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg md:text-xl font-semibold mb-2">Coleira Estilosa</h3>
+                            <p class="text-gray-700 mb-4">Coleira ajustável com design moderno e fecho de segurança.</p>
+                            <span class="text-yellow-500 font-bold">R$ 49,90</span>
+                        </div>
+                    </div>
+                    <!-- Produto 4 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:border-yellow-400 transition-colors">
+                        <img src="https://placehold.co/400x300" alt="Ração Premium" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg md:text-xl font-semibold mb-2">Ração Premium</h3>
+                            <p class="text-gray-700 mb-4">Ração balanceada com nutrientes essenciais para a saúde do seu pet.</p>
+                            <span class="text-yellow-500 font-bold">R$ 79,90</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Depoiments -->
+        <section id="depoiments" class="bg-gray-50">
+            <div class="max-w-6xl mx-auto py-8 md:py-12 px-4">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center text-gray-800">Depoimentos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <p class="text-gray-700 mb-4">"Adorei o atendimento! Meu cachorro saiu impecável."</p>
+                        <p class="font-semibold text-gray-900">- Maria Silva</p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <p class="text-gray-700 mb-4">"Melhor petshop da região, recomendo!"</p>
+                        <p class="font-semibold text-gray-900">- Carlos Pereira</p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <p class="text-gray-700 mb-4">"Produtos de ótima qualidade e preço justo."</p>
+                        <p class="font-semibold text-gray-900">- Ana Costa</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="bg-white">
+            <div class="max-w-6xl mx-auto py-8 md:py-12 px-4">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center text-gray-800">Contato</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Informações de contato -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-6">Informações de Contato</h3>
+                        <div class="mb-4">
+                            <p class="text-gray-700 font-semibold">Email:</p>
+                            <a href="mailto:contato@petestyle.com" class="text-yellow-500 hover:text-yellow-600">contato@petestyle.com</a>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-gray-700 font-semibold">Telefone:</p>
+                            <a href="tel:+554832333333" class="text-yellow-500 hover:text-yellow-600">(48) 3233-3333</a>
+                        </div>
+                        <div>
+                            <p class="text-gray-700 font-semibold">Endereço:</p>
+                            <p class="text-gray-600">Rua das Flores, 123 - Florianópolis, SC</p>
+                        </div>
+                    </div>
+
+                    <!-- Formulário de contato -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-6">Envie uma Mensagem</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-semibold mb-2">Nome</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/30" placeholder="Seu nome">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/30" placeholder="seu@email.com">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-gray-700 font-semibold mb-2">Mensagem</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/30" placeholder="Sua mensagem..."></textarea>
+                            </div>
+                            <button type="submit" class="bg-yellow-400 text-gray-900 font-semibold px-6 py-3 rounded-lg hover:bg-yellow-300 transition-colors w-full">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
