@@ -1,0 +1,31 @@
+.produto-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  width: 220px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.produto-card h2 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.produto-card img {
+  width: 200px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.produto-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #444;
+  text-align: center;
+}
