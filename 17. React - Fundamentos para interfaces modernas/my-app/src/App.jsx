@@ -6,7 +6,7 @@ import img2 from "./assets/2.jpg";
 import img3 from "./assets/3.jpg";
 
 function App() {
-    const [produtos, setProdutos] = useState([
+    const produtosMockados = [
         {
             id: 1,
             nome: 'Produto 1',
@@ -28,7 +28,10 @@ function App() {
             imagem: img3,
             descricao: 'Descrição do Produto 3'
         }
-    ]);
+    ];
+
+    const [produtos, setProdutos] = useState([]);
+    const [carregando, setCarregando] = useState(true);
 
     const [novoProduto, setNovoProduto] = useState({ nome: "", preco: "", imagem: "", descricao: "" });
     const handleSubmit = (e) => {
@@ -47,11 +50,14 @@ function App() {
     }
 
     useEffect(() => {
-        console.log("Produtos atualizados:", produtos);
-        setTimeout(() => {
-            console.log("Produtos atualizados após 2 segundos:", produtos);
+        console.log("Carregando produtos...");
+        const timer = setTimeout(() => {
+            setProdutos(produtosMockados);
+            setCarregando(false);
+            console.log("Produtos atualizados após 2 segundos:", produtosMockados);
         }, 2000);
-    }, [produtos]);
+        return () => clearTimeout(timer);
+    }, []);
 
     return (
         <main>
@@ -77,12 +83,15 @@ function App() {
                 <button type="submit">Adicionar</button>
             </form>
             <div className="produto-lista">
-                {produtos.map((produto) => (
-                    <ProdutoCard key={produto.id} produto={produto} />
-                ))}
+                {carregando
+                    ? <p>Carregando produtos...</p>
+                    : produtos.map((produto) => (
+                        <ProdutoCard key={produto.id} produto={produto} />
+                    ))
+                }
             </div>
         </main>
     )
 }
 
-export default App
+export default App;
